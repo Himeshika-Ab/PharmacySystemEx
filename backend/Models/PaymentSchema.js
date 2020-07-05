@@ -1,8 +1,12 @@
 const mongoose = require("mongoose");
-const Schema = mongoose.mongoose.Schema;
+const Schema = mongoose.Schema;
 
 const paymentSchema = new Schema ({
-    
+
+    name: {
+        type: String,
+        required: true
+    },
     amount:{
         type: Number,
         required: true
@@ -11,4 +15,6 @@ const paymentSchema = new Schema ({
         type: String,
         required: true
     }
-})
+});
+
+module.exports = paymentSchema;
